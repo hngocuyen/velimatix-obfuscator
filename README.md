@@ -19,15 +19,15 @@ A best AST outsource obfuscation by ngocuyencoder and minhnguyen2412
 
 ### Introduction
 
-Hello everyone, I am Ngocuyencoder. Today, I am excited to introduce you to the outsourcing obfuscation project we have been working on for the past few months, called **Velimatix**. We have referred to and modified code from various obfuscation sources on GitHub, including **Dauricum**, **Hyperion**, and **Pycloak**, to create a solution tailored to our needs.
+Hello everyone, I am Ngocuyencoder. Today, I am excited to introduce you to the outsource obfuscation we have been working on for the past few months, called **Velimatix**. We have referred to and modified code from various obfuscation sources on GitHub, including **Dauricum**, **Hyperion**, and **Pycloak**, to create a solution tailored to our needs.
 
 ### Features
 
 #### Anti-Hooking
-This feature ensures that our code is protected from hooking attempts. It is very robust, and its effectiveness is maximized by not publicly releasing the source code.
+This feature ensures our code is protected from hooking (perhaps after this source is published, the guarantee will be gone)
 
 #### Anti-Pycdc
-Our obfuscation effectively counters Pycdc (Python Decompiler). Although some have attempted to customize Pycdc to bypass our anti-measures, they have been unsuccessful. Here’s an example of typical bypass code:
+Our obfuscation effectively counters Pycdc (PYC Decompiler). Although some have attempted to customize Pycdc to bypass our anti-measures, they have been unsuccessful. Here’s an example of typical bypass code:
 ```python
 try:
     pass
@@ -39,22 +39,20 @@ finally:
 Even though such methods can bypass other protections, they do not succeed against our anti-measures.
 
 #### Anti-HTTPTookit and Proxy Systems
-We have modified the source to include protections against HTTPToolkit and proxy systems. By applying our knowledge of hooking, we have developed an effective anti-system for these tools.
+
 
 #### AST (Abstract Syntax Tree) Modifications
 We have incorporated various methods to protect and obfuscate the AST:
 
-- **EXCEPTJ Method**: Based on the Dauricum method
-- **BINASCII Method**: Inspired by the Hyperion method
-- **BUILTINS.DICT Method**: Using the Pycloak method
+
 - **STRING Method**: Custom-written by MinhNguyen, utilizing `eval(lambda ...)`
 
 ### Sources and Acknowledgments
 
 We have drawn inspiration and code from the following GitHub repositories:
-- **Dauricum**: For their methods in AST manipulation
-- **Hyperion**: For their unique approaches to binary and ASCII protection
-- **Pycloak**: For their innovative techniques in dictionary obfuscation
+- **Dauricum**: For EXCEPTJ
+- **Hyperion**: binascii and vars
+- **Pycloak**: method `__builtins__.__dict__`
 
 ### Conclusion
 
@@ -92,15 +90,11 @@ Hãy sửa đổi mã nguồn của Velimatix để thêm tính năng này vào
 
 #### Sửa đổi AST (Abstract Syntax Tree)
 bọn tôi đã kết hợp nhiều method để bảo vệ và obfuscate AST:
-
-- **method EXCEPTJ**: Dựa trên method Dauricum
-- **method BINASCII**: Lấy cảm hứng từ method Hyperion
-- **method BUILTINS.DICT**: Sử dụng method Pycloak
 - **method STRING**: Viết bởi MinhNguyen, sử dụng `eval(lambda ...)`
 
 ### Nguồn và Lời cảm ơn
 bọn tôi đã lấy cảm hứng và mã từ các kho GitHub sau:
-- **Dauricum**: method thao tác AST 
+- **Dauricum**: EXCEPTJ
 - **Hyperion**: method binascii và vars
 - **Pycloak**: method `__builtins__.__dict__`
 
