@@ -83,7 +83,7 @@ except:
 finally:
     pass
 ```
-Mặc dù các method như vậy có thể bypass được các bảo vệ khác, nhưng không thể vượt qua được anti của bọn tôi.
+Mặc dù các method như vậy có thể bypass được bằng PYCDC CUSTOM, nhưng không thể qua được anti của bọn tôi.
 
 #### Anti-HTTPTookit và Hệ thống Proxy
 Hãy sửa đổi mã nguồn của Velimatix để thêm tính năng này vào
@@ -98,7 +98,8 @@ bọn tôi đã lấy cảm hứng và mã từ các kho GitHub sau:
 - **Hyperion**: method binascii và vars
 - **Pycloak**: method `__builtins__.__dict__`
 
-### Kết luận
+### Cuối cùng
+Vì trong quá trình làm thì vô tình bị dò rỉ ra ngoài nên bọn tôi quyết định public chỗ outsource này
 
 For any questions or further information, please feel free to contact us.
 
